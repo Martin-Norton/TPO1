@@ -10,7 +10,6 @@ public class ModoAvionReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        if (Intent.ACTION_AIRPLANE_MODE_CHANGED.equals(intent.getAction())) {
             boolean modoAvionOn = intent.getBooleanExtra("state", false);
 
             if (modoAvionOn) {
@@ -22,6 +21,5 @@ public class ModoAvionReceiver extends BroadcastReceiver {
             } else {
                 Toast.makeText(context, "Modo Avión DESACTIVADO", Toast.LENGTH_LONG).show();
             }
-        }
     }
 }
